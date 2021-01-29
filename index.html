@@ -59,23 +59,27 @@
             </div>
             <div class="input-group f-class">
                 <div>
-                    <label for="">First Class ($<span id="firstTicket">150</span>)</label>
-                    <input id="firstInput" class="inp-style inp-width" type="number" value="1" name="">
+                    <label for="">First Class ($150)</label>
+                    <input id="first-Input" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p id="paymentIncrement">+</p>
-                    <p id="paymentDecrement">-</p>
+                    <p><span id="first-Increment">+</span>
+                    <span id="first-Decrement">-</span>
+                </p>
 
                 </div>
             </div>
 
             <div class="input-group f-class">
                 <div>
-                    <label for="">Economy ($<span id="economyTicket">100</span>)</label>
-                    <input id="economyInput" class="inp-style inp-width" type="number" value="1" name="">
+                    <label for="">Economy ($100)</label>
+                    <input id="economy-Input" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span id="priceIncrement">+</span> <span id="priceDecrement">-</span> </p>
+                    <p>
+                        <span id="economy-Increment">+</span>
+                        <span id="economy-Decrement">-</span>
+                    </p>
                 </div>
             </div>
             <div class="calculations">
@@ -84,7 +88,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="subTotal">$250</p>
+                        <p id="subTotal">$0</p>
                     </div>
                 </div>
 
@@ -93,7 +97,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p id="vat">$25</p>
+                        <p id="vat">$0</p>
                     </div>
                 </div>
                 <hr>
@@ -102,7 +106,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p id="totalPrice">$275</p>
+                        <p id="totalPrice">$0</p>
                     </div>
                 </div>
             </div>
@@ -113,72 +117,69 @@
     <!--Thank You-->
 
     <script>
-        //First class ticket Price.
-        document.getElementById('paymentIncrement').addEventListener('click', function () {
-            eventHandler(true)
-        })
-        document.getElementById('paymentDecrement').addEventListener('click', function () {
-            eventHandler(false)
-        })
+        // //First class ticket Price.
+        // document.getElementById('paymentIncrement').addEventListener('click', function () {
+        //     eventHandler(true)
+        // })
+        // document.getElementById('paymentDecrement').addEventListener('click', function () {
+        //     eventHandler(false)
+        // })
 
 
-        function eventHandler(priceIncrease) {
-            const firstInput = document.getElementById('firstInput');
-            let inputValue = parseInt(firstInput.value);
-            if (priceIncrease == true) {
-                inputValue++;
-            }
-            if (priceIncrease == false && inputValue > 0) {
-                inputValue--;
-            }
-            document.getElementById('firstInput').value = inputValue;
-            document.getElementById('firstTicket').innerText;
-            const ticketPrice = inputValue * 150;
-            document.getElementById('firstTicket').innerText = ticketPrice;
-            total();
-        }
+        // function eventHandler(priceIncrease) {
+        //     const firstInput = document.getElementById('firstInput');
+        //     let inputValue = parseInt(firstInput.value);
+        //     if (priceIncrease == true) {
+        //         inputValue++;
+        //     }
+        //     if (priceIncrease == false && inputValue > 0) {
+        //         inputValue--;
+        //     }
+        //     document.getElementById('firstInput').value = inputValue;
+        //     const ticketPrice = inputValue * 150;
+        //     total();
+        // }
 
 
-        //Economy ticket Price.
-        document.getElementById('priceIncrement').addEventListener('click', function () {
-            eventListener(true)
-        })
-        document.getElementById('priceDecrement').addEventListener('click', function () {
-            eventListener(false)
-        })
+        // //Economy ticket Price.
+        // document.getElementById('priceIncrement').addEventListener('click', function () {
+        //     eventListener(true)
+        // })
+        // document.getElementById('priceDecrement').addEventListener('click', function () {
+        //     eventListener(false)
+        // })
 
-        function eventListener(priceIncrease) {
-            const economyInput = document.getElementById('economyInput');
-            let economyValue = parseInt(economyInput.value);
-            if (priceIncrease == true) {
-                economyValue++;
-            }
-            if (priceIncrease == false && economyValue > 0) {
-                economyValue--;
-            }
-            document.getElementById('economyInput').value = economyValue;
-            document.getElementById('economyTicket').innerText;
-            const ticketPrice = economyValue * 100;
-            document.getElementById('economyTicket').innerText = ticketPrice;
-            total();
-        }
+        // function eventListener(priceIncrease) {
+        //     const economyInput = document.getElementById('economyInput');
+        //     let economyValue = parseInt(economyInput.value);
+        //     if (priceIncrease == true) {
+        //         economyValue++;
+        //     }
+        //     if (priceIncrease == false && economyValue > 0) {
+        //         economyValue--;
+        //     }
+        //     document.getElementById('economyInput').value = economyValue;
+        //     const ticketPrice = economyValue * 100;
+        //     total();
+        // }
 
-        function total() {
-            const subTotal = document.getElementById('subTotal').innerText;
-            const firstInput = document.getElementById('firstInput').value;
-            const economyInput = document.getElementById('economyInput').value;
+        // function total() {
+        //     const subTotal = document.getElementById('subTotal').innerText;
+        //     const firstInput = document.getElementById('firstInput').value;
+        //     const economyInput = document.getElementById('economyInput').value;
 
-            const subTotalAmount = firstInput * 150 + economyInput * 100;
+        //     const subTotalAmount = firstInput * 150 + economyInput * 100;
 
-            document.getElementById('subTotal').innerText = '$' + subTotalAmount;
-            const vat = document.getElementById('vat').innerText;
-            const totalVat = subTotalAmount * 0.1;
-            document.getElementById('vat').innerText = '$' + totalVat;
-            const totalPrice = document.getElementById('totalPrice').innerText;
-            const grandTotal = subTotalAmount + totalVat;
-            document.getElementById('totalPrice').innerHTML = '$' + grandTotal;
-        }
+        //     document.getElementById('subTotal').innerText = '$' + subTotalAmount;
+        //     const vat = document.getElementById('vat').innerText;
+        //     const totalVat = subTotalAmount * 0.1;
+        //     document.getElementById('vat').innerText = '$' + totalVat;
+        //     const totalPrice = document.getElementById('totalPrice').innerText;
+        //     const grandTotal = subTotalAmount + totalVat;
+        //     document.getElementById('totalPrice').innerHTML = '$' + grandTotal;
+        // }
     </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
