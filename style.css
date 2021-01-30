@@ -64,6 +64,7 @@ nav ul li a:hover, a.active{
     float: right;
     width: 65%;
     margin-left: 180px;
+    position: relative;
 }
 .booking-form h3{
     margin: 10px 0px;
@@ -121,4 +122,48 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+
+.Greet-card{
+    display: none;
+    width: 20rem;
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 1.6rem;
+    box-shadow: 10px 10px 18px #1b1919;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-320px);
+    right: 29rem;
+}
+.Greet-icon{
+    font-size: 3rem;
+    text-align: center;
+    color: #68B8F7;
+}
+.card-title{
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+.card-text{
+    text-align: center;
+    color: #666666;
+}
+
+.join-btn{
+    background: #68B8F7;
+    padding: 10px;
+    margin-top: 1.5rem;
+    width: 150px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    box-shadow: 5px 5px 15px #696969;
+    margin-left: 50px;
 }

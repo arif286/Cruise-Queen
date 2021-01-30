@@ -50,3 +50,14 @@ function total() {
     const grandTotal = subTotalAmount + totalVat;
     document.getElementById('totalPrice').innerHTML = '$' + grandTotal;
 }
+
+// Booking button
+
+document.querySelector('.btn-style').addEventListener('click', function () {
+   const bookingArea = document.querySelector('.Greet-card');
+   bookingArea.style.display = 'block';
+})
+
+document.querySelector('.join-btn').addEventListener('click',function(){
+    document.querySelector('.Greet-card').style.display = 'none';
+})
