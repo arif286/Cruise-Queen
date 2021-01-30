@@ -128,7 +128,7 @@ nav ul li a:hover, a.active{
     display: none;
     width: 20rem;
     background: #FFFFFF;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 1.6rem;
     box-shadow: 10px 10px 18px #1b1919;
     position: absolute;
@@ -148,6 +148,7 @@ nav ul li a:hover, a.active{
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: #333333;
+    font-weight: 400;
 }
 .card-text{
     text-align: center;
