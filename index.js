@@ -13,7 +13,7 @@ document.getElementById('economy-Decrement').addEventListener('click', function 
     eventManager('economy',false);
 })
 
-//
+//function
 function eventManager(ticket, priceIncrease) {
     const ticketInput = document.getElementById(ticket + '-Input');
     let ticketNumber = parseInt(ticketInput.value);
@@ -31,11 +31,11 @@ function eventManager(ticket, priceIncrease) {
     if ( ticket == 'economy'){
         ticketTotal = ticketNumber * 100;
     }
-    total();
+    calculateTotal();
 }
 
-
-function total() {
+//calculation subtotal, vat and grand total
+function calculateTotal() {
     const subTotal = document.getElementById('subTotal').innerText;
     const firstInput = document.getElementById('first-Input').value;
     const economyInput = document.getElementById('economy-Input').value;
@@ -51,8 +51,8 @@ function total() {
     document.getElementById('totalPrice').innerHTML = '$' + grandTotal;
 }
 
-// Booking button
 
+// Booking button
 document.querySelector('.btn-style').addEventListener('click', function () {
    const bookingArea = document.querySelector('.Greet-card');
    bookingArea.style.display = 'block';
