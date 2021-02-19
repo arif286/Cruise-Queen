@@ -60,4 +60,5 @@ document.querySelector('.btn-style').addEventListener('click', function () {
 
 document.querySelector('.join-btn').addEventListener('click',function(){
     document.querySelector('.Greet-card').style.display = 'none';
+ location.reload();
 })
